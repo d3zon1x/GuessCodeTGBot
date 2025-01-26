@@ -63,5 +63,3 @@ Fokus projektu: bot rozpoczyna czat i oczekuje na wprowadzenie komend przez uży
 - `/endgame` - zakończenie gry wieloosobowej.
 - `/help` - wyświetlenie listy dostępnych komend.
 
-## Wsparcie
-Skontaktuj się z [adminem](mailto:admin@example.com) w przypadku problemów.
