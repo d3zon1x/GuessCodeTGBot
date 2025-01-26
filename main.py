@@ -1,5 +1,7 @@
 import random
 import string
+import os
+from dotenv import load_dotenv
 from telegram import Update
 from telegram.constants import ParseMode
 from telegram.ext import (
@@ -440,8 +442,10 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
 
 def main():
-    application = Application.builder().token("7616000568:AAGeXiJFUjcVJznFvgtD9XMroc6-JyoAhSY").build()
+    load_dotenv()
+    token = os.getenv("BOT_TOKEN")
 
+    application = Application.builder().token(token).build()
     # Add command handlers
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("restart", restart))
